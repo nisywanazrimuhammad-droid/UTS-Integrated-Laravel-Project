@@ -127,7 +127,7 @@
                     <div class="form-group">
                         <label class="form-label">Role Akses *</label>
                         <select name="role" class="form-select" required>
-                            <option value="staff" selected>Staff (Operasional)</option>
+                            <option value="customer" selected>Customer / Pelanggan</option><option value="staff">Staff (Operasional)</option>
                             <option value="admin">Admin / Owner (Penuh)</option>
                         </select>
                     </div>

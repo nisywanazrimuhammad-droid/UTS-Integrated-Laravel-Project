@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
         Gate::define('manage-master-data', fn (User $user) => $user->isAdmin());
         Gate::define('manage-users', fn (User $user) => $user->isAdmin());
         Gate::define('cancel-transaction', fn (User $user) => $user->isAdmin());
-        Gate::define('manage-purchases', fn (User $user) => in_array($user->role, ['admin', 'staff'], true));
-        Gate::define('manage-sales', fn (User $user) => in_array($user->role, ['admin', 'staff'], true));
+        Gate::define('manage-purchases', fn (User $user) => in_array($user->role, ['admin', 'staff', 'customer'], true));
+        Gate::define('manage-sales', fn (User $user) => in_array($user->role, ['admin', 'staff', 'customer'], true));
     }
 }

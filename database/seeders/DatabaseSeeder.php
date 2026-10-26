@@ -45,7 +45,7 @@ class DatabaseSeeder extends Seeder
             'address' => 'Jl. Pergudangan Logistik Blok B No. 4',
         ]);
 
-        $siti = User::create([
+        $customer = User::create(['name'=>'Andi Pratama','username'=>'customer','email'=>'customer@example.com','password'=>'customer123','role'=>'customer']); UserProfile::create(['user_id'=>$customer->id,'full_name'=>'Andi Pratama (Customer)','phone'=>'081399887766','address'=>'Jl. Sudirman No. 45']); $siti = User::create([
             'name' => 'Siti Rahma',
             'username' => 'siti',
             'email' => 'siti@example.com',

@@ -56,7 +56,7 @@
     <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); font-size: 0.82rem; color: var(--text-muted);">
         <strong>Akun Demo (Database Seeder):</strong><br>
         • <strong>Admin/Owner:</strong> <code>admin</code> (atau <code>admin@example.com</code>) / <code>admin123</code><br>
-        • <strong>Staff Operasional:</strong> <code>staff</code> (atau <code>staff@example.com</code>) / <code>staff123</code>
+        • <strong>Staff Operasional:</strong> <code>staff</code> (atau <code>staff@example.com</code>) / <code>staff123</code><br>• <strong>Customer/Pelanggan:</strong> <code>customer</code> (atau <code>customer@example.com</code>) / <code>customer123</code>
     </div>
 </div>
 @endsection
