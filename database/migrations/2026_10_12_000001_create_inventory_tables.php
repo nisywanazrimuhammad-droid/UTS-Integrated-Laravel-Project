@@ -83,6 +83,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users')->cascadeOnUpdate()->restrictOnDelete();
             $table->string('sale_number', 50)->unique();
             $table->string('customer_name', 150)->nullable();
+            $table->string('payment_method', 50)->default('COD (Bayar di Tempat)');
             $table->decimal('total', 14, 2)->default(0);
             $table->enum('status', ['completed', 'cancelled'])->default('completed');
             $table->timestamp('sold_at');

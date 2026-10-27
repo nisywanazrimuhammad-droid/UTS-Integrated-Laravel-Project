@@ -64,6 +64,7 @@ class SaleController extends Controller
     {
         $validated = $request->validate([
             'customer_name' => ['nullable', 'string', 'max:150'],
+            'payment_method' => ['nullable', 'string', 'max:50'],
             'sold_at' => ['nullable', 'date'],
             'notes' => ['nullable', 'string', 'max:500'],
             'items' => ['required', 'array', 'min:1'],
@@ -81,6 +82,7 @@ class SaleController extends Controller
                 'user_id' => auth()->id(),
                 'sale_number' => $this->generateSaleNumber(),
                 'customer_name' => $validated['customer_name'] ?: 'Pelanggan Umum / Walk-in',
+                'payment_method' => $validated['payment_method'] ?? 'COD (Bayar di Tempat)',
                 'total' => 0,
                 'status' => 'completed',
                 'sold_at' => !empty($validated['sold_at']) ? $validated['sold_at'] : now(),

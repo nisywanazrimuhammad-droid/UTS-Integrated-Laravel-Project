@@ -61,7 +61,7 @@
         </div>
 
         <div>
-            <div style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Catatan</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Metode Pembayaran</div><div style="margin: 0.25rem 0 0.85rem 0;"><span class="badge badge-success">{{ $sale->payment_method ?? 'COD (Bayar di Tempat)' }}</span></div><div style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Catatan</div>
             <div style="font-size: 0.9rem; margin-top: 0.2rem;">{{ $sale->notes ?: '-' }}</div>
         </div>
     </div>

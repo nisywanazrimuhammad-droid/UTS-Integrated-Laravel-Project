@@ -12,6 +12,7 @@ class Sale extends Model
         'user_id',
         'sale_number',
         'customer_name',
+        'payment_method',
         'total',
         'status',
         'sold_at',

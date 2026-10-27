@@ -31,7 +31,7 @@
             </div>
 
             <div class="form-group" style="margin-bottom: 0;">
-                <label for="notes" class="form-label">Catatan Penjualan</label>
+                <label for="payment_method" class="form-label">Metode Pembayaran *</label><select name="payment_method" id="payment_method" class="form-select" style="margin-bottom: 1rem;" required><option value="COD (Bayar di Tempat)">COD (Bayar di Tempat / Tunai)</option><option value="Transfer Bank (BCA / Mandiri / BRI / BSI)">Transfer Bank (BCA / Mandiri / BRI / BSI)</option><option value="QRIS / E-Wallet (GoPay / OVO / Dana)">QRIS / E-Wallet (GoPay / OVO / Dana)</option></select><label for="notes" class="form-label">Catatan Penjualan</label>
                 <input type="text" name="notes" id="notes" class="form-control" placeholder="Contoh: Pembayaran Tunai / Transfer..." value="{{ old('notes') }}">
             </div>
         </div>
