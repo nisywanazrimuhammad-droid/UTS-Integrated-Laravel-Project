@@ -149,3 +149,64 @@ php artisan test
 ## 9. Known Limitations (Batasan Sistem)
 - Sistem ini berfokus pada pencatatan stok gudang tunggal (*single warehouse*) dan belum terhubung ke *payment gateway* eksternal sesuai ruang lingkup UTS.
 - Pencetakan struk/invoice dan laporan menggunakan fungsi cetak halaman browser (`window.print()`).
+
+## 10. Dokumentasi Sistem Penjualan & Inventaris (Sales & Stock-Out)
+
+Dokumentasi alur dan tampilan antarmuka modul transaksi penjualan pada sistem. Seluruh aset tangkapan layar tersimpan pada direktori `pictures/`.
+
+---
+
+### 1. Daftar Transaksi Penjualan
+Halaman utama yang menampilkan daftar riwayat transaksi penjualan beserta status dan staff/kasir yang bertugas.
+
+![Daftar Transaksi Penjualan - Filter](pictures/Screenshot%202026-10-26%20004017.png)
+*Gambar: Tampilan filter tanggal dan tombol buat transaksi baru.*
+
+![Daftar Transaksi Penjualan - Status & Aksi](pictures/Screenshot%202026-10-26%20004041.png)
+*Gambar: Status transaksi completed dan tombol akses detail struk.*
+
+---
+
+### 2. Input Transaksi Penjualan Baru (Multi-Item Sales)
+Formulir untuk memproses penjualan keluar (stock-out) dengan kalkulasi otomatis dari database.
+
+![Form Input Penjualan Lengkap](pictures/Screenshot%202026-10-28%20095548.png)
+*Gambar: Input data pelanggan, metode pembayaran (COD), dan pemilihan barang.*
+
+![Daftar Barang Penjualan](pictures/Screenshot%202026-10-28%20095615.png)
+*Gambar: Kalkulasi total penjualan dari sisi server dan tombol simpan transaksi.*
+
+---
+
+### 3. Validasi & Penanganan Error Stok (Rollback System)
+Sistem otomatis membatalkan seluruh transaksi dan memberikan peringatan jika kuantitas barang yang diminta melebihi sisa stok yang tersedia di gudang.
+
+![Validasi Stok Kurang](pictures/Screenshot%202026-10-26%20004615.png)
+*Gambar: Notifikasi peringatan stok tidak mencukupi saat proses input.*
+
+---
+
+### 4. Detail Transaksi & Invoice Penjualan
+Tampilan rincian tagihan setelah transaksi berhasil diproses dan dicatat ke dalam database.
+
+### Transaksi 1 (Role: Customer)
+![Detail Invoice Customer](pictures/Screenshot%202026-10-28%20095753.png)
+*Gambar: Detail transaksi penjualan dengan metode pembayaran COD.*
+
+![Rincian Barang Customer](pictures/Screenshot%202026-10-28%20095809.png)
+*Gambar: Rincian item barang yang keluar pada transaksi 1.*
+
+### Transaksi 2 (Role: Admin)
+![Detail Invoice Admin](pictures/Screenshot%202026-10-26%20004117.png)
+*Gambar: Detail invoice dengan opsi cetak dan pembatalan transaksi oleh admin.*
+
+![Rincian Barang Admin](pictures/Screenshot%202026-10-26%20004134.png)
+*Gambar: Rincian kuantitas keluar dan subtotal transaksi 2.*
+
+---
+
+### 5. Fitur Cetak Invoice / Struk
+Fitur pratinjau dan pencetakan invoice ke format fisik atau ekspor ke dokumen PDF.
+
+![Pratinjau Cetak Invoice](pictures/Screenshot%202026-10-26%20004159.png)
+*Gambar: Dialog cetak invoice sistem.*
