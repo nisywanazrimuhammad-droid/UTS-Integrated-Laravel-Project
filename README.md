@@ -149,7 +149,7 @@ php artisan test
 
 ## 9. Known Limitations (Batasan Sistem)
 - Sistem ini berfokus pada pencatatan stok gudang tunggal (*single warehouse*) sesuai ruang lingkup UTS.
-- Sistem sudah mendukung pemilihan *Metode Pembayaran* (*COD / Bayar di Tempat, **Transfer Bank, dan **QRIS / E-Wallet)        beserta instruksi pembayaran otomatis pada struk invoice; verifikasi lunas dilakukan secara internal pada sistem (simulasi   *payment gateway tanpa penarikan saldo bank nyata secara real-time).
+- Sistem sudah mendukung pemilihan *Metode Pembayaran* (COD / Bayar di Tempat, Transfer Bank, dan QRIS / E-Wallet)        beserta instruksi pembayaran otomatis pada struk invoice; verifikasi lunas dilakukan secara internal pada sistem (simulasi   payment gateway tanpa penarikan saldo bank nyata secara real-time).
 - Pencetakan struk/invoice dan laporan menggunakan fungsi cetak halaman browser (`window.print()`).
 
 ## 10. Dokumentasi Sistem Penjualan & Inventaris (Sales & Stock-Out)
