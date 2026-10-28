@@ -81,6 +81,7 @@ Setelah menjalankan `php artisan migrate --seed`, gunakan akun berikut untuk log
 | **Admin / Owner** | `admin` | `admin@example.com` | `admin123` | Akses penuh: CRUD Kategori, Produk, Supplier, Kelola User, Buat/Batalkan Pembelian & Penjualan, Laporan Agregat |
 | **Staff Gudang/Kasir** | `staff` | `staff@example.com` | `staff123` | Akses operasional: Lihat Katalog Produk, Buat Transaksi Pembelian (Stock-In) & Penjualan (Sales), Lihat Laporan |
 | **Staff Operasional** | `siti` | `siti@example.com` | `staff123` | Akses operasional Staff |
+| **Customer** | `customer` | `customer@example.com` | `customer123` | Melakukan Registrasi, Lihat Katalog Produk, Melakukan Transaksi Pembelian |
 
 ---
 
