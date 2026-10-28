@@ -81,7 +81,7 @@ Setelah menjalankan `php artisan migrate --seed`, gunakan akun berikut untuk log
 | **Admin / Owner** | `admin` | `admin@example.com` | `admin123` | Akses penuh: CRUD Kategori, Produk, Supplier, Kelola User, Buat/Batalkan Pembelian & Penjualan, Laporan Agregat |
 | **Staff Gudang/Kasir** | `staff` | `staff@example.com` | `staff123` | Akses operasional: Lihat Katalog Produk, Buat Transaksi Pembelian (Stock-In) & Penjualan (Sales), Lihat Laporan |
 | **Staff Operasional** | `siti` | `siti@example.com` | `staff123` | Akses operasional Staff |
-| **Customer** | `customer` | `customer@example.com` | `customer123` | Melakukan Registrasi, Lihat Katalog Produk, Melakukan Transaksi Pembelian |
+| **Customer** | `customer` | `customer@example.com` | `customer123` | Lihat Katalog Produk, Checkout Pesanan Mandiri (Pilih Metode Pembayaran: COD, Transfer Bank, QRIS), Lihat Struk & Riwayat Pesanan |
 
 ---
 
@@ -148,7 +148,8 @@ php artisan test
 ---
 
 ## 9. Known Limitations (Batasan Sistem)
-- Sistem ini berfokus pada pencatatan stok gudang tunggal (*single warehouse*) dan belum terhubung ke *payment gateway* eksternal sesuai ruang lingkup UTS.
+- Sistem ini berfokus pada pencatatan stok gudang tunggal (*single warehouse*) sesuai ruang lingkup UTS.
+- Sistem sudah mendukung pemilihan *Metode Pembayaran* (*COD / Bayar di Tempat, **Transfer Bank, dan **QRIS / E-Wallet)        beserta instruksi pembayaran otomatis pada struk invoice; verifikasi lunas dilakukan secara internal pada sistem (simulasi   *payment gateway tanpa penarikan saldo bank nyata secara real-time).
 - Pencetakan struk/invoice dan laporan menggunakan fungsi cetak halaman browser (`window.print()`).
 
 ## 10. Dokumentasi Sistem Penjualan & Inventaris (Sales & Stock-Out)
