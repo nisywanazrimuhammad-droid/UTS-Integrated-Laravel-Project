@@ -9,7 +9,7 @@ Aplikasi manajemen inventaris, pembelian stok (*Stock-In / Purchases*), dan tran
 Sebuah usaha distribusi mengelola katalog produk, kategori, pemasok (*supplier*), transaksi pembelian stok (*purchase order*), dan penjualan (*sales invoice*) melalui beberapa staf. Sistem ini menyelesaikan masalah pencatatan manual dengan memastikan:
 - **Konsistensi Stok Otomatis & Atomik**: Stok produk otomatis bertambah saat transaksi pembelian (`Purchases`) disimpan dan otomatis berkurang saat transaksi penjualan (`Sales`) berhasil, dibungkus dalam `DB::transaction()` dan `Product::lockForUpdate()` untuk mencegah *overselling* atau data tersimpan setengah-setengah (*partial write*).
 - **Validasi Server-Side & Integritas Harga**: Penjualan yang melebihi stok tersedia langsung ditolak dengan pesan jelas tanpa mengubah data. Subtotal dan total transaksi dihitung murni di sisi server berdasarkan harga resmi di database.
-- **Role-Based Access Control (RBAC)**: Pembatasan hak akses di sisi server (Middleware & Laravel Gate) antara **Admin/Owner** dan **Staff**.
+- **Role-Based Access Control (RBAC)**: Pembatasan hak akses di sisi server (Middleware & Laravel Gate) antara **Admin/Owner**, **Staff**, **Customer**
 
 ---
 
